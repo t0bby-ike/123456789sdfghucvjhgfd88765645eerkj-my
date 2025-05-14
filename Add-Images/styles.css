@@ -1,0 +1,267 @@
+/* Base Styles */
+:root {
+  --primary: #4a6bff;
+  --dark: #1a1a2e;
+  --light: #f8f9fa;
+  --accent: #ff6b6b;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* File Upload Container */
+.file-upload-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.upload-area {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.upload-area.active {
+  border-color: var(--primary);
+  background: rgba(74, 107, 255, 0.05);
+}
+
+.upload-icon {
+  position: relative;
+  margin: 0 auto 1rem;
+  width: 60px;
+  height: 60px;
+}
+
+.upload-icon i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  position: relative;
+  z-index: 2;
+}
+
+.upload-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #f0f0f0;
+  border-top-color: var(--primary);
+  transform: rotate(0deg);
+  animation: spin 1s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.upload-progress.active {
+  opacity: 1;
+}
+
+.file-info {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  min-height: 1.2rem;
+}
+
+/* Preview Controls */
+.preview-controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.preview-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.preview-header h4 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.page-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.page-nav {
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.pdf-preview {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+/* Image Options */
+.image-options {
+  background: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.image-options h4 {
+  margin-top: 0;
+  color: var(--primary);
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.option-group {
+  margin-bottom: 0;
+}
+
+.option-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.option-group input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.image-previews {
+  margin-top: 1.5rem;
+}
+
+.image-previews h5 {
+  margin: 0 0 0.5rem 0;
+  color: #555;
+}
+
+.preview-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px dashed #ddd;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.empty-images {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #999;
+}
+
+.empty-images i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ddd;
+}
+
+/* Image Thumbnails */
+.image-thumbnail {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0.3rem;
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.image-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-image {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+/* Status Indicators */
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  background: #e0e0e0;
+  color: #555;
+}
+
+.status-loaded {
+  background: #4CAF50;
+  color: white;
+}
+
+.status-error {
+  background: #f44336;
+  color: white;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .file-upload-container,
+  .preview-controls {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Stryk’s All PDF</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="Docx2Pdf/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="img.png" alt="Stryk’s All PDF">
+      <h1>Stryk's <span>PDF Tools</span></h1>
+    </div>
+    <button class="hamburger-menu" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="Merger/index.html"><i class="fas fa-compress"></i> Merge PDFs</a></li>
+      <li hidden="true"><a href="#"><i class="fas fa-font"></i> Add Text</a></li>
+      <li><a href="Remove-Pages/index.html"><i class="fas fa-trash"></i> Remove Pages</a></li>
+      <li hidden="true"><a href="#"><i class="fas fa-edit"></i> Edit PDF Text</a></li>
+      <li><a href="Docx2Pdf/index.html"><i class="fas fa-file-word"></i> DOCX to PDF</a></li>
+      <li><a href="Split-Pdf/index.html"><i class="fas fa-cut"></i> Split PDF</a></li>
+      <li hidden="true"><a href="#"><i class="fas fa-stamp"></i> Add Watermark</a></li>
+      <li><a href="Add-Images/index.html"><i class="fas fa-image"></i> Add Images</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <div class="privacy-container">
+      <div class="privacy-header">
+        <h1><i class="fas fa-shield-alt"></i> Privacy Policy</h1>
+        <p>Last Updated: June 10, 2024</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>1. Introduction</h2>
+        <p>Welcome to Stryk’s All PDF ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our DOCX to PDF conversion tool and related services (the "Service").</p>
+        
+        <div class="highlight">
+          <p><strong>Important:</strong> Our Service processes your documents entirely in your browser. We do not upload, store, or have access to your files or their contents.</p>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2>2. Information We Don't Collect</h2>
+        <p>Because our conversion happens entirely in your browser:</p>
+        <ul>
+          <li><strong>We do not collect</strong> the content of your documents</li>
+          <li><strong>We do not store</strong> your files on our servers</li>
+          <li><strong>We cannot access</strong> your documents during or after conversion</li>
+        </ul>
+      </div>
+
+      <div class="privacy-section">
+        <h2>3. Information We Do Collect</h2>
+        <p>We may collect the following information for service improvement:</p>
+        <ul>
+          <li><strong>Usage Data:</strong> Browser type, device type, and operating system</li>
+          <li><strong>Analytics:</strong> Pages visited, features used, and session duration</li>
+          <li><strong>Metadata:</strong> File names and sizes (but not content) for conversion statistics</li>
+        </ul>
+      </div>
+
+      <div class="privacy-section">
+        <h2>4. How We Use Information</h2>
+        <p>We use collected information to:</p>
+        <ul>
+          <li>Provide and maintain our Service</li>
+          <li>Improve user experience</li>
+          <li>Monitor usage patterns</li>
+          <li>Detect and prevent technical issues</li>
+        </ul>
+      </div>
+
+      <div class="privacy-section">
+        <h2>5. Cookies and Tracking</h2>
+        <p>We use essential cookies to:</p>
+        <ul>
+          <li>Remember your preferences</li>
+          <li>Maintain your session</li>
+          <li>Provide basic analytics</li>
+        </ul>
+        <p>We do not use tracking cookies or third-party advertising trackers.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>6. Data Security</h2>
+        <p>We implement security measures including:</p>
+        <ul>
+          <li>HTTPS encryption for all communications</li>
+          <li>Regular security audits</li>
+          <li>Minimal data collection practices</li>
+        </ul>
+        <p>However, no internet transmission is 100% secure. You use our Service at your own risk.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>7. Children's Privacy</h2>
+        <p>Our Service is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>8. Changes to This Policy</h2>
+        <p>We may update our Privacy Policy. We will notify you of changes by posting the new policy on this page and updating the "Last Updated" date.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>9. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy, please contact us at:</p>
+        <p><strong>Email:</strong> skull@drstryk.com</p>
+      </div>
+    </div>
+  </main>
+
+   <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="Privacy-Policy.html">Privacy Policy</a>
+        <a href="Terms.html">Terms</a>
+        <a href="index.html">All Tools</a>
+      </div>
+      <p>© 2024 <strong>Stryk's All PDF Editor</strong></p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const sidebar = document.getElementById('sidebar');
+      const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+      // Hamburger menu toggle
+      hamburger.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarOverlay.style.display = sidebar.classList.contains('active') ? 'block' : 'none';
+      });
+
+      // Close sidebar when clicking overlay
+      sidebarOverlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        sidebarOverlay.style.display = 'none';
+      });
+
+      // Responsive adjustments
+      function handleResize() {
+        if (window.innerWidth > 768) {
+          sidebar.classList.remove('active');
+          sidebarOverlay.style.display = 'none';
+        }
+      }
+
+      window.addEventListener('resize', handleResize);
+      handleResize();
+    });
+  </script>
+</body>
+</html>

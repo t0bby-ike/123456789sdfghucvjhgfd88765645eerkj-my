@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | Stryk's All PDF</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="Docx2Pdf/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="img.png" alt="Stryk's All PDF">
+      <h1>Stryk's <span>PDF Tools</span></h1>
+    </div>
+    <button class="hamburger-menu" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="Merger/index.html"><i class="fas fa-compress"></i> Merge PDFs</a></li>
+      <li hidden="true"><a href="#"><i class="fas fa-font"></i> Add Text</a></li>
+      <li><a href="Remove-Pages/index.html"><i class="fas fa-trash"></i> Remove Pages</a></li>
+      <li hidden="true"><a href="#"><i class="fas fa-edit"></i> Edit PDF Text</a></li>
+      <li><a href="Docx2Pdf/index.html"><i class="fas fa-file-word"></i> DOCX to PDF</a></li>
+      <li><a href="Split-Pdf/index.html"><i class="fas fa-cut"></i> Split PDF</a></li>
+      <li hidden="true"><a href="#"><i class="fas fa-stamp"></i> Add Watermark</a></li>
+      <li><a href="Add-Images/index.html"><i class="fas fa-image"></i> Add Images</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <div class="privacy-container">
+      <div class="privacy-header">
+        <h1><i class="fas fa-file-contract"></i> Terms & Conditions</h1>
+        <p>Last Updated: June 10, 2024</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using Stryk's All PDF ("the Service"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to all of these Terms, do not use this Service.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>2. Description of Service</h2>
+        <p>Stryk's All PDF provides browser-based PDF tools including but not limited to:</p>
+        <ul>
+          <li>PDF merging and splitting</li>
+          <li>DOCX to PDF conversion</li>
+          <li>Page removal and image addition</li>
+          <li>Other PDF manipulation tools</li>
+        </ul>
+        <p>All processing occurs in your browser - we do not upload your files to our servers.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>3. User Responsibilities</h2>
+        <p>You agree to:</p>
+        <ul>
+          <li>Use the Service only for lawful purposes</li>
+          <li>Not upload sensitive or confidential information</li>
+          <li>Not attempt to reverse engineer the Service</li>
+          <li>Be responsible for any content you process</li>
+        </ul>
+      </div>
+
+      <div class="privacy-section">
+        <h2>4. Intellectual Property</h2>
+        <p>The Service and its original content, features, and functionality are owned by Stryk's All PDF and are protected by international copyright, trademark, and other intellectual property laws.</p>
+        <p>You retain all rights to the documents you process through our Service.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>5. Disclaimer of Warranties</h2>
+        <p>The Service is provided "AS IS" without warranties of any kind, either express or implied, including but not limited to:</p>
+        <ul>
+          <li>Warranties of merchantability</li>
+          <li>Fitness for a particular purpose</li>
+          <li>Non-infringement</li>
+          <li>That the Service will be uninterrupted or error-free</li>
+        </ul>
+      </div>
+
+      <div class="privacy-section">
+        <h2>6. Limitation of Liability</h2>
+        <p>In no event shall Stryk's All PDF be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation:</p>
+        <ul>
+          <li>Loss of profits</li>
+          <li>Loss of data</li>
+          <li>Business interruption</li>
+          <li>Other commercial damages or losses</li>
+        </ul>
+        <p>arising out of or related to your use or inability to use the Service.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>7. Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms at any time. We will notify you of any changes by updating the "Last Updated" date of these Terms.</p>
+        <p>Your continued use of the Service after such modifications constitutes your acceptance of the modified Terms.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>8. Governing Law</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of [Your Country/State], without regard to its conflict of law provisions.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>9. Contact Information</h2>
+        <p>For any questions about these Terms, please contact us at:</p>
+        <p><strong>Email:</strong> skull@drstryk.com</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="Privacy-Policy.html">Privacy Policy</a>
+        <a href="Terms.html">Terms</a>
+        <a href="index.html">All Tools</a>
+      </div>
+      <p>© 2024 <strong>Stryk's All PDF Editor</strong></p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const sidebar = document.getElementById('sidebar');
+      const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+      // Hamburger menu toggle
+      hamburger.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarOverlay.style.display = sidebar.classList.contains('active') ? 'block' : 'none';
+      });
+
+      // Close sidebar when clicking overlay
+      sidebarOverlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        sidebarOverlay.style.display = 'none';
+      });
+
+      // Responsive adjustments
+      function handleResize() {
+        if (window.innerWidth > 768) {
+          sidebar.classList.remove('active');
+          sidebarOverlay.style.display = 'none';
+        }
+      }
+
+      window.addEventListener('resize', handleResize);
+      handleResize();
+    });
+  </script>
+</body>
+</html>

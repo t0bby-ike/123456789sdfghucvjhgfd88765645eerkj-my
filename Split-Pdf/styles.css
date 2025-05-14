@@ -1,0 +1,297 @@
+/* PDF Preview Styles */
+.thumbnail-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.thumbnail {
+  width: 160px;
+  height: 220px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+
+.thumbnail canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumbnail.selected {
+  border-color: var(--primary);
+}
+
+.highlight-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 235, 59, 0.3);
+  pointer-events: none;
+}
+
+.page-number {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+/* Range Selector */
+.range-selector {
+  height: 8px;
+  background: #eee;
+  position: relative;
+  margin: 20px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.range-highlight {
+  position: absolute;
+  height: 100%;
+  background-color: rgba(255, 235, 59, 0.5);
+  border-radius: 4px;
+}
+
+.range-handle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border-radius: 50%;
+  top: -4px;
+  cursor: ew-resize;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Loading State */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fa-spinner {
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+/* Mode Toggle */
+.mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Selection Container */
+.selection-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow);
+  min-height: 200px;
+}
+
+/* Visual Mode */
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.thumbnail {
+  width: 120px;
+  height: 170px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail.selected {
+  background-color: rgba(255, 255, 0, 0.3);
+  border-color: var(--primary);
+}
+
+.range-selector {
+  height: 5px;
+  background: #eee;
+  position: relative;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.range-selector-handle {
+  position: absolute;
+  width: 15px;
+  height: 25px;
+  background: var(--primary);
+  top: -10px;
+  cursor: ew-resize;
+  border-radius: 3px;
+}
+
+/* Manual Mode */
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.page-count {
+  color: #666;
+  font-size: 0.9rem;
+}
+/* (Keep all base styles from previous implementation) */
+
+/* Preview Container */
+.preview-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow);
+}
+
+.preview-container h4 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.pdf-preview {
+  border: 1px solid #eee;
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f9f9f9;
+}
+
+/* Page Preview */
+.page-preview {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: white;
+}
+
+.page-preview h5 {
+  margin: 0 0 10px 0;
+  color: var(--primary);
+}
+
+.page-content {
+  border: 1px solid #eee;
+  min-height: 100px;
+  padding: 10px;
+}
+
+/* Selection Container */
+.selection-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow);
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.page-count {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Highlight selected pages */
+.page-preview.selected {
+  background-color: rgba(255, 255, 0, 0.2);
+  border-color: var(--primary);
+}

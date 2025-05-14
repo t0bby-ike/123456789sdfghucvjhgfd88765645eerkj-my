@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Remove pages from PDF documents online. Select and delete unwanted pages, then download your modified PDF file instantly.">
+  <meta name="keywords" content="remove PDF pages, delete PDF pages, edit PDF online, PDF page remover">
+  <title>Remove PDF Pages | Stryk's All PDF Editor</title>
+  <link rel="stylesheet" href="../Merger/styles.css">
+  <link rel="stylesheet" href="../Docx2Pdf/styles.css">
+<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="../index.html"><img src="../img.png" alt="Stryk's PDF Editor"></a>
+      <h1>Stryk's <span>All PDF Editor</span></h1>
+    </div>
+    <button class="hamburger-menu" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+ <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="../Merger/index.html"><i class="fas fa-compress"></i> Merge Pdf</a></li>
+      <li hidden="true"><a href="../Remove-Pages/index.html" class="active"><i class="fas fa-trash"></i> Remove Pages</a></li>
+      <li hidden="true"><a href="../Edit-Text/index.html"><i class="fas fa-edit"></i> Edit PDF Text</a></li>
+      <li><a href="../Docx2Pdf/index.html"><i class="fas fa-file-word"></i> DOCX to PDF</a></li>
+      <li><a href="../Split-Pdf/index.html"><i class="fas fa-cut"></i> Split PDF</a></li>
+      <li hidden="true"><a href="../Add-Watermark/index.html"><i class="fas fa-stamp"></i> Add Watermark</a></li>
+      <li><a href="../Add-Images/index.html" hidden><i class="fas fa-image"></i> Add Images</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/remove-hero.jpg')">
+    <div class="hero-content">
+      <h2>Remove Pages from PDF Documents</h2>
+      <p>Delete unwanted pages from your PDF files and create perfectly tailored documents in seconds.</p>
+    </div>
+  </section>
+
+  <main class="tool-container">
+    <div class="upload-area" id="dropZone">
+      <i class="fas fa-file-pdf"></i>
+      <h3>Select a PDF File</h3>
+      <p>Max file size: 50MB</p>
+      <input type="file" id="fileInput" accept=".pdf" hidden>
+      <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+        Choose File
+      </button>
+      <div id="pdfPreview"></div>
+    </div>
+
+    <div class="pages-container" id="pagesContainer">
+      <!-- Pages will be displayed here -->
+    </div>
+<button class="btn-merge" id="removePagesBtn" disabled>
+      <i class="fas fa-file-export"></i> Generate New PDF
+    </button>
+
+    <section class="info-section">
+      <h3>How to Remove PDF Pages</h3>
+      <ol>
+        <li><strong>Upload your PDF</strong> file</li>
+        <li><strong>Click the X button</strong> on pages you want to remove</li>
+        <li><strong>Click "Generate New PDF"</strong> to download your modified file</li>
+      </ol>
+    </section>
+  </main>
+
+  <div class="modal" id="downloadModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Your Modified PDF is Ready!</h3>
+      <p>File saved as: <span id="fileNameDisplay"></span></p>
+      <button class="btn-primary" id="downloadBtn">
+        <i class="fas fa-download"></i> Download PDF
+      </button>
+    </div>
+  </div>
+<button class="scroll-to-bottom" id="scrollToBottomBtn" title="Scroll to bottom">
+    <i class="fas fa-arrow-down"></i>
+  </button>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="../Privacy-Policy.html">Privacy Policy</a>
+        <a href="../Terms.html">Terms</a>
+        <a href="../index.html">All Tools</a>
+      </div>
+      <p>© 2024 <strong>Stryk's All PDF Editor</strong></p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="../Merger/main.js"></script>
+  <script src="remove-pages.js"></script>
+</body>
+</html>

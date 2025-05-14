@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Merge multiple PDF files into one document for free. Preserve quality and order with Stryk's secure online PDF merger.">
+  <meta name="keywords" content="merge PDF, combine PDF, join PDF, PDF merger online">
+  <title>Merge PDFs Online | Stryk's All PDF Editor</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../Docx2Pdf/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html"><img src="../img.png" alt="Stryk's PDF Editor"></a>
+      <h1>Stryk's <span>All PDF Editor</span></h1>
+    </div>
+     <button class="hamburger-menu" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+<!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="../Remove-Pages/index.html"><i class="fas fa-trash"></i> Remove Pages</a></li>
+      <li hidden="true"><a href="../Edit-Text/index.html"><i class="fas fa-edit"></i> Edit PDF Text</a></li>
+      <li><a href="../Docx2Pdf/index.html"><i class="fas fa-file-word"></i> DOCX to PDF</a></li>
+      <li><a href="../Split-Pdf/index.html"><i class="fas fa-cut"></i> Split PDF</a></li>
+      <li hidden="true"><a href="../Add-Watermark/index.html"><i class="fas fa-stamp"></i> Add Watermark</a></li>
+      <li><a href="../Add-Images/index.html"><i class="fas fa-image"></i> Add Images</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/merge-hero.jpg')">
+    <div class="hero-content">
+      <h2>Merge PDF Files in Seconds</h2>
+      <p>Combine multiple documents into one organized PDF. Drag, drop, and download no watermarks or registration.</p>
+    </div>
+  </section>
+
+  <main class="tool-container">
+    <div class="upload-area" id="dropZone">
+      <i class="fas fa-file-pdf"></i>
+      <h3>Select or Drop PDF Files</h3>
+      <p>Up to 20 files (Max 50MB each)</p>
+      <input type="file" id="fileInput" accept=".pdf" multiple hidden>
+      <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+        Choose Files
+      </button>
+      <div class="file-list" id="fileList"></div>
+      <div class="add-more" id="addMoreBtn">
+        <i class="fas fa-plus"></i> Add More Files
+      </div>
+    </div>
+
+    <button class="btn-merge" id="mergeBtn" disabled>
+      <i class="fas fa-merge"></i> Merge PDFs
+    </button>
+
+    <section class="info-section">
+      <h3>How to Merge PDFs Online</h3>
+      <ol>
+        <li><strong>Upload files</strong> by clicking or dragging.</li>
+        <li><strong>Reorder pages</strong> (drag and drop).</li>
+        <li><strong>Click "Merge PDFs"</strong> to download instantly.</li>
+      </ol>
+    </section>
+  </main>
+
+  <div class="modal" id="downloadModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Your Merged PDF is Ready!</h3>
+      <p>File saved as: <span id="fileNameDisplay"></span></p>
+      <button class="btn-primary" id="downloadBtn">
+        <i class="fas fa-download"></i> Download PDF
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="../Privacy-Policy.html">Privacy Policy</a>
+        <a href="../Terms.html">Terms</a>
+        <a href="../index.html">All Tools</a>
+      </div>
+      <p>© 2024 <strong>Stryk's All PDF Editor</strong></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="../Merger/script.js"></script>
+<script src="main.js"></script>
+  <script src="merge.js"></script>
+</body>
+</html>

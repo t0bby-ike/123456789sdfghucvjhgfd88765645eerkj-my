@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Splitter | Stryk's All PDF Editor</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../Docx2Pdf/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="../index.html"><img src="../img.png" alt="Stryk's PDF Editor"></a>
+      <h1>Stryk's <span>All PDF Editor</span></h1>
+    </div>
+    <button class="hamburger-menu" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="../Remove-Pages/index.html"><i class="fas fa-trash"></i> Remove Pages</a></li>
+      <li hidden="true"><a href="../Edit-Text/index.html"><i class="fas fa-edit"></i> Edit PDF Text</a></li>
+      <li><a href="../Docx2Pdf/index.html"><i class="fas fa-file-word"></i> DOCX to PDF</a></li>
+      <li><a href="../Merger/index.html" class="active"><i class="fas fa-compress"></i> Merge PDF</a></li>
+      <li hidden="true"><a href="../Add-Watermark/index.html"><i class="fas fa-stamp"></i> Add Watermark</a></li>
+      <li><a href="../Add-Images/index.html"><i class="fas fa-image"></i> Add Images</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Split PDF Files</h2>
+      <p>Extract specific pages from your PDF document. Enter page range and download.</p>
+    </div>
+  </section>
+
+  <main class="tool-container">
+    <div class="upload-area" id="dropZone">
+      <i class="fas fa-file-pdf"></i>
+      <h3>Select or Drop PDF File</h3>
+      <p>Max file size: 50MB</p>
+      <input type="file" id="fileInput" accept=".pdf" hidden>
+      <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+        Choose File
+      </button>
+    </div>
+
+    <div class="preview-container" id="previewContainer" style="display:none;">
+      <h4>PDF Preview</h4>
+      <div class="pdf-preview" id="pdfPreview"></div>
+    </div>
+
+    <div class="selection-container">
+      <div class="input-group">
+        <label for="pageRange">Page Range (e.g., 1-5,8,10-12):</label>
+        <input type="text" id="pageRange" placeholder="Enter page range">
+      </div>
+      <div class="page-count" id="pageCount"></div>
+    </div>
+
+    <button class="btn-merge" id="splitBtn" disabled>
+      <i class="fas fa-cut"></i> Split PDF
+    </button>
+
+    <div class="info-section">
+      <h3>How to Split PDFs</h3>
+      <ol>
+        <li><strong>Upload your PDF file</strong></li>
+        <li><strong>Enter page range in the input box</strong></li>
+        <li><strong>Click "Split PDF" to download selected pages</strong></li>
+      </ol>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="../Privacy-Policy.html">Privacy Policy</a>
+        <a href="../Terms.html">Terms</a>
+        <a href="../index.html">All Tools</a>
+      </div>
+      <p>© 2024 <strong>Stryk's All PDF Editor</strong></p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

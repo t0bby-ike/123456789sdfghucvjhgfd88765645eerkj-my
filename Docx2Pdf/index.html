@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Convert DOCX files to PDF online for free. Preserve formatting with Stryk's secure document converter.">
+  <meta name="keywords" content="docx to pdf, word to pdf, convert docx, online pdf converter">
+  <title>DOCX to PDF Converter | Stryk's All PDF Editor</title>
+  <link rel="stylesheet" href="../Merger/styles.css">
+<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="../index.html"><img src="../img.png" alt="Stryk's PDF Editor"></a>
+      <h1>Stryk's <span>All PDF Editor</span></h1>
+    </div>
+    <button class="hamburger-menu" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="../Remove-Pages/index.html"><i class="fas fa-trash"></i> Remove Pages</a></li>
+      <li hidden="true"><a href="../Edit-Text/index.html"><i class="fas fa-edit"></i> Edit PDF Text</a></li>
+      <li><a href="../Merger/index.html" class="active"><i class="fas fa-compress"></i> Merge PDF</a></li>
+      <li><a href="../Split-Pdf/index.html"><i class="fas fa-cut"></i> Split PDF</a></li>
+      <li hidden="true"><a href="../Add-Watermark/index.html"><i class="fas fa-stamp"></i> Add Watermark</a></li>
+      <li><a href="../Add-Images/index.html"><i class="fas fa-image"></i> Add Images</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Convert DOCX to PDF Online</h2>
+      <p>Transform Word documents to PDF while preserving formatting. No watermarks, no registration required.</p>
+    </div>
+  </section>
+
+  <main class="tool-container">
+    <div class="upload-area" id="dropZone">
+      <i class="fas fa-file-word"></i>
+      <h3>Select or Drop DOCX File</h3>
+      <p>Max file size: 50MB</p>
+      <input type="file" id="fileInput" accept=".docx" hidden>
+      <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+        Choose File
+      </button>
+      <div class="file-list" id="fileList"></div>
+    </div>
+
+    <div class="preview-container" id="previewContainer">
+      <h4>PDF Preview</h4>
+      <div id="output" class="pdf-preview"></div>
+    </div>
+
+    <button class="btn-merge" id="convertBtn" disabled>
+      <i class="fas fa-file-pdf"></i> Convert to PDF
+    </button>
+
+    <section class="info-section">
+      <h3>How to Convert DOCX to PDF</h3>
+      <ol>
+        <li><strong>Upload your DOCX file</strong> by clicking or dragging</li>
+        <li><strong>Preview the conversion</strong> in the window above</li>
+        <li><strong>Click "Convert to PDF"</strong> to download instantly</li>
+      </ol>
+    </section>
+  </main>
+
+  <div class="modal" id="downloadModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Your PDF is Ready!</h3>
+      <p>File saved as: <span id="fileNameDisplay">document.pdf</span></p>
+      <button class="btn-primary" id="downloadBtn">
+        <i class="fas fa-download"></i> Download PDF
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="../Privacy-Policy.html">Privacy Policy</a>
+        <a href="../Terms.html">Terms</a>
+        <a href="../index.html">All Tools</a>
+      </div>
+      <p>© 2024 <strong>Stryk's All PDF Editor</strong></p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.0/mammoth.browser.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
